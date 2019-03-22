@@ -14,29 +14,20 @@ The purpose of this document is to facilitate the execution of a proof of concep
 
 ## POC Executive Overview
 
-### Segmentation
+### Workload/Network Segmentation
 - Container to Container
 - Container to Linux
 - Linux to Linux
-- PROD to DEV will be denied
-- DEV to PROD will be denied
+- Linux to CIDR
 
 ### Service (User to Service)
 - OAUTH2 / OIDC
 - Mutual TLS (Certificate)
 
-### Linux
-- Users’s (including root) will be permitted to access local YUM repo’s only.
-- Users will not be permitted to access internet
-- Users of group “redwood” will be permitted to access a resource labeled “modern”
-- Users of group “paloalto” will be denied access to rescue labeled “modern”
-
-### Linux
-- Users’s (including root) will be permitted to access local YUM repo’s only.
-- Users will not be permitted to access internet by default
-- 
-- Users of group “redwood” will be permitted to access a resource labeled “modern”
-- Users of group “paloalto” will be denied access to rescue labeled “modern”
+### Additional Use Cases
+- PROD to DEV and DEV to PROD be denied (regardless of workload type)
+- Access to Yum repos will only be permitted to officially sanctioned repos
+- Limit access to resources based on group identity
 
 ## Base Requirements
 
@@ -48,12 +39,13 @@ AWS Account
 
 Your Sales Engineer will assist if you are executing the POC on your environment.
 
+(incomplete below)
+
 ### Setup
 ```bash
 git clone https://github.com/jodydadescott/mpac_poc.git
 ```
 
-(incomplete below)
 ### Validation
 
 | Use Case               | Validation |
