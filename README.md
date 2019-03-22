@@ -13,20 +13,20 @@ Aporeto provides Application Segmentation and Zero-Trust Network Segmentation us
 The purpose of this document is to facilitate the execution of a proof of concept (POC). This document is based upon the analysis of the MPAC environment as described by MPAC personal.
 
 ## POC Overview
-Segmentation
-Container to Container
-Container to Linux
-Linux to Linux
-PROD to DEV will be denied
-DEV to PROD will be denied
-Service (User to Service)
-OAUTH2 / OIDC
-Mutual TLS (Certificate)
-Linux
-Users’s (including root) will be permitted to access local YUM repo’s only.
-Users will not be permitted to access internet
-Users of group “redwood” will be permitted to access a resource labeled “modern”
-Users of group “paloalto” will be denied access to rescue labeled “modern”
+### Segmentation
+- Container to Container
+- Container to Linux
+- Linux to Linux
+- PROD to DEV will be denied
+- DEV to PROD will be denied
+- Service (User to Service)
+- OAUTH2 / OIDC
+- Mutual TLS (Certificate)
+### Linux
+- Users’s (including root) will be permitted to access local YUM repo’s only.
+- Users will not be permitted to access internet
+- Users of group “redwood” will be permitted to access a resource labeled “modern”
+- Users of group “paloalto” will be denied access to rescue labeled “modern”
 
 ## Base Requirements
 
