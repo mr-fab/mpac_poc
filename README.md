@@ -12,11 +12,7 @@ Aporeto provides Application Segmentation and Zero-Trust Network Segmentation us
 
 The purpose of this document is to facilitate the execution of a proof of concept (POC). This document is based upon the analysis of the MPAC environment as described by MPAC personal.
 
-## POC Validation
-
-| Item     | Validation |
-| ---      | ---  |
-| Container to Container |      |
+## POC Executive Overview
 
 ### Segmentation
 - Container to Container
@@ -24,13 +20,21 @@ The purpose of this document is to facilitate the execution of a proof of concep
 - Linux to Linux
 - PROD to DEV will be denied
 - DEV to PROD will be denied
-- Service (User to Service)
+
+### Service (User to Service)
 - OAUTH2 / OIDC
 - Mutual TLS (Certificate)
 
 ### Linux
 - Users’s (including root) will be permitted to access local YUM repo’s only.
 - Users will not be permitted to access internet
+- Users of group “redwood” will be permitted to access a resource labeled “modern”
+- Users of group “paloalto” will be denied access to rescue labeled “modern”
+
+### Linux
+- Users’s (including root) will be permitted to access local YUM repo’s only.
+- Users will not be permitted to access internet by default
+- 
 - Users of group “redwood” will be permitted to access a resource labeled “modern”
 - Users of group “paloalto” will be denied access to rescue labeled “modern”
 
@@ -43,6 +47,16 @@ AWS Account
 ## Execution
 
 Your Sales Engineer will assist if you are executing the POC on your environment.
+
+### Setup
 ```bash
 git clone https://github.com/jodydadescott/mpac_poc.git
 ```
+
+(incomplete below)
+### Validation
+
+| Use Case               | Validation |
+| ---------------------- | ---------- |
+| Container to Container |            |
+| Container to Linux     |            |
