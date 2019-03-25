@@ -80,7 +80,7 @@ On the Kubernetes clusters
 
 ### Validation
 
-Your SE will now work with you to demonstrate the following.
+Each use case will be validated. Once validated both MPAC and Aporeto can initial the validation.
 
 | Use Case                                                            | MPAC Agent | Aporeto Agent |
 | ------------------------------------------------------------------- | ---------- | ------------- |
