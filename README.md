@@ -41,55 +41,54 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 (incomplete below)
 
-### Installation and Setup (General Overview)
+### Installation and Setup
 
-Your Aporeto SE will assist you with this.
+Your Aporeto SE will work with you to create specific instructions on how to deploy the POC in your desired environment. This is a general overview of the steps that will be necessary. Ideally the setup will be scripted by you SE before the scheduled POC.
 
 In your cloud or datacenter enviroment
+
 - Install apoctl on your workstation 
 - Provision a Kubernetes Clusters named kube1 with two or more nodes
 - Provision two Linux VM's named linux1 and linux2
 
-Using the Aporeto apoctl utility or UI create the following namespaces
-- poc in account /mpac
-- linux and kube in /mpac/poc
-- kube1 in /mpac/poc/kube
+Using your preferred OIDC provider
 
-1. Using the Aporeto apoctl utility or UI create the following External Networks in /mpac/poc
-- localrepo with CIDR (Your local repo), protocol TCP, any ports and the tag localrepo=true
-- internet with CIDR 0.0.0.0/0, protocol any, any ports and tag internet=true
-- dns with CIDR 0.0.0.0/0, protocol UDP, port 53 and tag dns=true
+- create a web application and record id and key
+- add users such as bob and alice
+- assign users group membership
+- make sure group is part of default scope
 
-1. Using the Aporeto apoctl utility or UI create the following Network Policies in /mpac/poc
-- permit $identity=processingunit to dns=true
-- permit Linux group nginx to nginx=true
+Using the Aporeto apoctl utility or UI
 
-1. Using the Aporeto apoctl utility or UI create the following Network Policies in /mpac/poc/kube/kube1
-- permit role=frontend to role=backend
-- permit internet=true to role=frontend
+- create namespaces
+- create External Networks
+- create network policies
+- create enforcer profiles
+- create service policies
 
-1. On the Linux VM's 
+On the Linux VM's
+
 - install the Aporeto Enforcer and Register with the Orchestrator
-- add line 'session required /lib/x86_64-linux-gnu/security/pam_trireme.so' to /etc/pam.d
-- configure and start nginx as wrapped process with label nginx=true
+- configure pam.d
+- configure wrapped services
 
-1. On the Kubernetes clusters
+On the Kubernetes clusters
+
 - use helm charts to install Aporeto
-- deploy application beer in namespace beer1 and beer2
-- expose via service role=frontend
+- deploy test applications
 
 
 ### Validation
 
 Your SE will now work with you to demonstrate the following.
 
-| Use Case                                | Validation |
-| ------------------------------------------------------------------- | ---------- |
-| Network Segmentation                                                |            |
-| Ingress Service/API AAA via OAUTH2/OIDC                             |            |
-| Ingress Service/API AAA via Certificate                             |            |
-| Bastion Linux Host (UID PAM)                                        |            |
-| Yum utility will only be able to access local repos                 |            |
-| Workloads marked prod will only talk to other workloads marked prod |            |
+| Use Case                                                            | MPAC Agent | Aporeto Agent |
+| ------------------------------------------------------------------- | ---------- | ------------- |
+| Network Segmentation                                                |            |               |
+| Ingress Service/API AAA via OAUTH2/OIDC                             |            |               |
+| Ingress Service/API AAA via Certificate                             |            |               |
+| Bastion Linux Host (UID PAM)                                        |            |               |
+| Yum utility will only be able to access local repos                 |            |               |
+| Workloads marked prod will only talk to other workloads marked prod |            |               |
 
 
