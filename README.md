@@ -45,12 +45,12 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 Your Aporeto SE will assist you with this.
 
-1. In your cloud or datacenter enviroment
+In your cloud or datacenter enviroment
 - Install apoctl on your workstation 
 - Provision a Kubernetes Clusters named kube1 with two or more nodes
 - Provision two Linux VM's named linux1 and linux2
 
-1. Using the Aporeto apoctl utility or UI create the following namespaces
+Using the Aporeto apoctl utility or UI create the following namespaces
 - poc in account /mpac
 - linux and kube in /mpac/poc
 - kube1 in /mpac/poc/kube
