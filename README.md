@@ -1,11 +1,9 @@
-# MPAC & Aporeto Proof Of Concept (POC)
-![Customer Logo](https://github.com/jodydadescott/mpac_poc/blob/master/customer_logo.png?raw=true)![Aporeto Logo](https://github.com/jodydadescott/mpac_poc/blob/master/aporeto_logo.png)
-
-# MPAC & Aporeto Proof Of Concept (POC)
-
 <div align="center">
+    <img src="customer_logo.png" width="200px"</img> 
     <img src="aporeto_logo.png" width="200px"</img> 
 </div>
+
+# MPAC & Aporeto Proof Of Concept (POC)
 
 ## Introduction
 
