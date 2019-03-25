@@ -45,14 +45,11 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 ### Execution
 
-1 Create the namespace /mpac/poc
+1. Create the namespace /mpac/poc
+1. Depploy Aporeto on both Kubernetes Cluster
+1. Do this
 
-2 Clone the repo (with the command)
-```bash
-git clone https://github.com/jodydadescott/mpac_poc.git
-```
 
-3 This
 
 ### Validation
 
