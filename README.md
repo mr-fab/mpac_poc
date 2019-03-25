@@ -41,58 +41,55 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 (incomplete below)
 
-### Installation and Setup
+### Installation and Setup (General Overview)
 
-The following actions will need to be performed in your cloud or datacenter enviroment.
+Your Aporeto SE will assist you with this.
 
-1. Provision two Kubernetes Clusters named kube1 and kube2
-1. Provision two Linux VM's named linux1 and bastion1
+1. In your cloud or datacenter enviroment
+- Install apoctl on your workstation 
+- Provision a Kubernetes Clusters named kube1 with two or more nodes
+- Provision two Linux VM's named linux1 and linux2
 
-The following items will need to be performed on the Aporeto Console using either the UI or the apoctl utility.
+1. Using the Aporeto apoctl utility or UI create the following namespaces
+- poc in account /mpac
+- linux and kube in /mpac/poc
+- kube1 in /mpac/poc/kube
 
-1. Under the account namespace /mpac create the child namespace poc [instructions](https://junon.console.aporeto.com/docs/main/concepts/namespaces/)
-1. Under the namespace poc create the child namespaces linux and kubernetes
+1. Using the Aporeto apoctl utility or UI create the following External Networks in /mpac/poc
+- localrepo with CIDR (Your local repo), protocol TCP, any ports and the tag localrepo=true
+- internet with CIDR 0.0.0.0/0, protocol any, any ports and tag internet=true
+- dns with CIDR 0.0.0.0/0, protocol UDP, port 53 and tag dns=true
 
+1. Using the Aporeto apoctl utility or UI create the following Network Policies in /mpac/poc
+- permit $identity=processingunit to dns=true
+- permit Linux group nginx to nginx=true
 
-1. Install apoctl on your workstation [instructions](https://junon.console.aporeto.com/docs/main/registration/logging-in-with-apoctl/)
+1. Using the Aporeto apoctl utility or UI create the following Network Policies in /mpac/poc/kube/kube1
+- permit role=frontend to role=backend
+- permit internet=true to role=frontend
 
+1. On the Linux VM's 
+- install the Aporeto Enforcer and Register with the Orchestrator
+- add line 'session required /lib/x86_64-linux-gnu/security/pam_trireme.so' to /etc/pam.d
+- configure and start nginx as wrapped process with label nginx=true
 
-
-
-
-
-
-1. Install Aporeto on both Kubernetes clusters using Helm charts. [instructions](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
-
-
-
-1. Install Aporeto Enforcer on Linux VMs [instructions](https://junon.console.aporeto.com/docs/main/installation/install-on-linux/)
-
-1. For VM bastion1 configure the PAM module [instructions](need to add)
-
-
-
-
-
-
-
-
-
-
-1. On Linux install the PAM module (Your SE will assist you)
-
-1. Deploy application on both Kubernetes cluster and label application app=appx & prod=true
-
-1. Deploy (another) application on both Kubernetes cluster and label application app=appy & prod=true
-
-1. Deploy (another) application on both Kubernetes cluster and label application app=appy & dev=true
-
-1. Install a policy that permits app=appx to communicate with app=appx
+1. On the Kubernetes clusters
+- use helm charts to install Aporeto
+- deploy application beer in namespace beer1 and beer2
+- expose via service role=frontend
 
 
 ### Validation
 
-| Use Case               | Validation |
-| ---------------------- | ---------- |
-| Container to Container |            |
-| Container to Linux     |            |
+Your SE will now work with you to demonstrate the following.
+
+| Use Case                                | Validation |
+| ------------------------------------------------------------------- | ---------- |
+| Network Segmentation                                                |            |
+| Ingress Service/API AAA via OAUTH2/OIDC                             |            |
+| Ingress Service/API AAA via Certificate                             |            |
+| Bastion Linux Host (UID PAM)                                        |            |
+| Yum utility will only be able to access local repos                 |            |
+| Workloads marked prod will only talk to other workloads marked prod |            |
+
+
