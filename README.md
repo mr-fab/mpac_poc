@@ -1,4 +1,4 @@
-|[Customer Logo](https://github.com/jodydadescott/mpac_poc/blob/master/customer_logo.png?raw=true) [Aporeto Logo (https://github.com/jodydadescott/mpac_poc/blob/master/aporeto_logo.png?raw=true)
+[Customer Logo](https://github.com/jodydadescott/mpac_poc/blob/master/customer_logo.png?raw=true) [Aporeto Logo (https://github.com/jodydadescott/mpac_poc/blob/master/aporeto_logo.png?raw=true)
 
 # MPAC & Aporeto Proof Of Concept (POC)
 
