@@ -24,7 +24,6 @@ The purpose of this document is to facilitate the execution of a proof of concep
 
 ## Customer Specific Use Cases
 
-### MPAC has defined the following uses cases that shall be included in this POC.
 - The yum utility will only be able to access local repos
 - Workloads marked prod will only talk to other workloads marked prod (Prod/Dev Segmentation)
 
@@ -50,7 +49,7 @@ The purpose of this document is to facilitate the execution of a proof of concep
 - assign users group membership
 - make sure group is part of default scope
 
-Using the Aporeto apoctl utility or UI
+### Using the Aporeto apoctl utility or UI
 
 - create namespaces
 - create External Networks
@@ -58,20 +57,20 @@ Using the Aporeto apoctl utility or UI
 - create enforcer profiles
 - create service policies
 
-On the Linux VM's
+### On the Linux VM's
 
 - install the Aporeto Enforcer and Register with the Orchestrator
 - configure pam.d
 - configure wrapped services
 
-On the Kubernetes clusters
+### On the Kubernetes clusters
 
 - use helm charts to install Aporeto
 - deploy test applications
 
 ## Validation
 
-Each use case will be validated. Once validated both MPAC and Aporeto can initial the validation.
+### Each use case will be validated. Once validated both MPAC and Aporeto can initial the validation.
 
 | Use Case                                                            | MPAC Agent | Aporeto Agent |
 | ------------------------------------------------------------------- | ---------- | ------------- |
