@@ -45,7 +45,7 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 ### Execution
 
-1. Create the namespace /mpac/poc [Kubernetes](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
+1. Create the namespace /mpac/poc (see install instructions) [https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
 1. Deploy Aporeto on both Kubernetes Cluster
 1. Do this
 
