@@ -43,14 +43,25 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 (incomplete below)
 
-### Execution
+### Installation and Setup
 
 1. Create the namespace /mpac/poc [(https://junon.console.aporeto.com/docs/main/concepts/namespaces/)](https://junon.console.aporeto.com/docs/main/concepts/namespaces/)
 
-1. Deploy Aporeto on both Kubernetes Cluster [https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
+1. Install apoctl on your workstation [(https://junon.console.aporeto.com/docs/main/registration/logging-in-with-apoctl/)](https://junon.console.aporeto.com/docs/main/registration/logging-in-with-apoctl/)
 
-1. Do this
+1. Deploy Aporeto on both Kubernetes Cluster [(https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
 
+1. Install Aporeto Enforcer on Linux [(https://junon.console.aporeto.com/docs/main/installation/install-on-linux/)](https://junon.console.aporeto.com/docs/main/installation/install-on-linux/)
+
+1. On Linux install the PAM module (Your SE will assist you)
+
+1. Deploy application on both Kubernetes cluster and label application app=appx & prod=true
+
+1. Deploy (another) application on both Kubernetes cluster and label application app=appy & prod=true
+
+1. Deploy (another) application on both Kubernetes cluster and label application app=appy & dev=true
+
+1. Install a policy that permits app=appx to communicate with app=appx
 
 
 ### Validation
