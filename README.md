@@ -34,8 +34,6 @@ MPAC has defined the following uses cases that shall be included in this POC.
 
 - Linux or Mac host with the following with bash, curl, and git.
 - Aporeto Account Credentials
-- Two Kubernetes clusters
-- Three Linux VM Instances (AWS EC2)
 
 ## Execution
 
@@ -45,13 +43,41 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 ### Installation and Setup
 
-1. Create the namespace /mpac/poc [(https://junon.console.aporeto.com/docs/main/concepts/namespaces/)](https://junon.console.aporeto.com/docs/main/concepts/namespaces/)
+The following actions will need to be performed in your cloud or datacenter enviroment.
 
-1. Install apoctl on your workstation [(https://junon.console.aporeto.com/docs/main/registration/logging-in-with-apoctl/)](https://junon.console.aporeto.com/docs/main/registration/logging-in-with-apoctl/)
+1. Provision two Kubernetes Clusters named kube1 and kube2
+1. Provision two Linux VM's named linux1 and bastion1
 
-1. Deploy Aporeto on both Kubernetes Cluster [(https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
+The following items will need to be performed on the Aporeto Console using either the UI or the apoctl utility.
 
-1. Install Aporeto Enforcer on Linux [(https://junon.console.aporeto.com/docs/main/installation/install-on-linux/)](https://junon.console.aporeto.com/docs/main/installation/install-on-linux/)
+1. Under the account namespace /mpac create the child namespace poc [instructions](https://junon.console.aporeto.com/docs/main/concepts/namespaces/)
+1. Under the namespace poc create the child namespaces linux and kubernetes
+
+
+1. Install apoctl on your workstation [instructions](https://junon.console.aporeto.com/docs/main/registration/logging-in-with-apoctl/)
+
+
+
+
+
+
+
+1. Install Aporeto on both Kubernetes clusters using Helm charts. [instructions](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/)
+
+
+
+1. Install Aporeto Enforcer on Linux VMs [instructions](https://junon.console.aporeto.com/docs/main/installation/install-on-linux/)
+
+1. For VM bastion1 configure the PAM module [instructions](need to add)
+
+
+
+
+
+
+
+
+
 
 1. On Linux install the PAM module (Your SE will assist you)
 
