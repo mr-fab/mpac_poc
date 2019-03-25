@@ -22,6 +22,7 @@ The purpose of this document is to facilitate the execution of a proof of concep
 - Micro Segmentation (Kubernetes, Docker, Mesos, etc)
 - Ingress Service/API AAA via OAUTH2/OIDC or Certificate (Mutual TLS)
 - Egress Service/API AAA via OAUTH2/OIDC or Certificate (Mutual TLS)
+- Bastion Linux Host (UID PAM)
 
 ### Customer Specific Use Cases
 
@@ -31,9 +32,10 @@ MPAC has defined the following uses cases that shall be included in this POC.
 
 ## Base Requirements
 
-Linux or Mac host with the following with bash, curl, and git.
-Aporeto Account Credentials
-AWS Account
+- Linux or Mac host with the following with bash, curl, and git.
+- Aporeto Account Credentials
+- Two Kubernetes clusters
+- Three Linux VM Instances (AWS EC2)
 
 ## Execution
 
@@ -41,10 +43,14 @@ Your Sales Engineer will assist if you are executing the POC on your environment
 
 (incomplete below)
 
-### Setup
+### Execution
+
+1 Create the namespace /mpac/poc
+2 Clone the repo 
 ```bash
 git clone https://github.com/jodydadescott/mpac_poc.git
 ```
+3 This
 
 ### Validation
 
