@@ -4,7 +4,7 @@
 # MPAC & Aporeto Proof Of Concept (POC)
 
 <div align="center">
-    <img src="aporeto_logo.png" width="400px"</img> 
+    <img src="aporeto_logo.png" width="200px"</img> 
 </div>
 
 ## Introduction
