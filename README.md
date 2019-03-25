@@ -1,6 +1,6 @@
 <div align="center">
-    <img src="customer_logo.png" width="200px"</img> 
-    <img src="aporeto_logo.png" width="200px"</img> 
+    <img src="customer_logo.png" height="100%" width="100%"</img> 
+    <img src="aporeto_logo.png" height="50%" width="50%"</img> 
 </div>
 
 # MPAC & Aporeto Proof Of Concept (POC)
