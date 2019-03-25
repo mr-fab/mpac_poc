@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
     <img src="customer_logo.png" height="50%" width="50%"</img> 
     <img src="aporeto_logo.png" height="50%" width="50%"</img> 
 </div>
