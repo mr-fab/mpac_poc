@@ -16,22 +16,18 @@ Aporeto provides Application Segmentation and Zero-Trust Network Segmentation us
 
 The purpose of this document is to facilitate the execution of a proof of concept (POC). This document is based upon the analysis of the MPAC environment as described by MPAC personal.
 
-## POC Executive Overview
+## Major Use Cases
 
-### Workload/Network Segmentation
-- Container to Container
-- Container to Linux
-- Linux to Linux
-- Linux to CIDR
+- Network Segmentation (Linux & Windows)
+- Micro Segmentation (Kubernetes, Docker, Mesos, etc)
+- Ingress Service/API AAA via OAUTH2/OIDC or Certificate (Mutual TLS)
+- Egress Service/API AAA via OAUTH2/OIDC or Certificate (Mutual TLS)
 
-### Service (User to Service)
-- OAUTH2 / OIDC
-- Mutual TLS (Certificate)
+### Customer Specific Use Cases
 
-### Additional Use Cases
-- PROD to DEV and DEV to PROD be denied (regardless of workload type)
-- Access to Yum repos will only be permitted to officially sanctioned repos
-- Limit access to resources based on group identity
+MPAC has defined the following uses cases that shall be included in this POC.
+- The yum utility will only be able to access local repos
+- Workloads marked prod will only talk to other workloads marked prod (Prod/Dev Segmentation)
 
 ## Base Requirements
 
