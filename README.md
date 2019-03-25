@@ -22,9 +22,9 @@ The purpose of this document is to facilitate the execution of a proof of concep
 - Service/API AAA using OAUTH2/OIDC or Certificate
 - Bastion Linux Host (UID PAM)
 
-### Customer Specific Use Cases
+## Customer Specific Use Cases
 
-MPAC has defined the following uses cases that shall be included in this POC.
+### MPAC has defined the following uses cases that shall be included in this POC.
 - The yum utility will only be able to access local repos
 - Workloads marked prod will only talk to other workloads marked prod (Prod/Dev Segmentation)
 
@@ -33,23 +33,17 @@ MPAC has defined the following uses cases that shall be included in this POC.
 - Linux or Mac host with the following with bash, curl, and git.
 - Aporeto Account Credentials
 
-## Execution
+## Installation and Setup
 
-Your Sales Engineer will assist if you are executing the POC on your environment.
+### Your Aporeto SE will work with you to create specific instructions on how to deploy the POC in your desired environment. This is a general overview of the steps that will be necessary. Ideally the setup will be scripted by you SE before the scheduled POC.
 
-(incomplete below)
-
-### Installation and Setup
-
-Your Aporeto SE will work with you to create specific instructions on how to deploy the POC in your desired environment. This is a general overview of the steps that will be necessary. Ideally the setup will be scripted by you SE before the scheduled POC.
-
-In your cloud or datacenter enviroment
+### In your cloud or datacenter enviroment
 
 - Install apoctl on your workstation 
 - Provision a Kubernetes Clusters named kube1 with two or more nodes
 - Provision two Linux VM's named linux1 and linux2
 
-Using your preferred OIDC provider
+### Using your preferred OIDC provider
 
 - create a web application and record id and key
 - add users such as bob and alice
@@ -75,7 +69,7 @@ On the Kubernetes clusters
 - use helm charts to install Aporeto
 - deploy test applications
 
-### Validation
+## Validation
 
 Each use case will be validated. Once validated both MPAC and Aporeto can initial the validation.
 
