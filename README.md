@@ -18,10 +18,8 @@ The purpose of this document is to facilitate the execution of a proof of concep
 
 ## Major Use Cases
 
-- Network Segmentation (Linux & Windows)
-- Micro Segmentation (Kubernetes, Docker, Mesos, etc)
-- Ingress Service/API AAA via OAUTH2/OIDC or Certificate (Mutual TLS)
-- Egress Service/API AAA via OAUTH2/OIDC or Certificate (Mutual TLS)
+- Network Segmentation / Micro Segmentation
+- Service/API AAA using OAUTH2/OIDC or Certificate
 - Bastion Linux Host (UID PAM)
 
 ### Customer Specific Use Cases
@@ -76,7 +74,6 @@ On the Kubernetes clusters
 
 - use helm charts to install Aporeto
 - deploy test applications
-
 
 ### Validation
 
