@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: frontend-gcp
+  namespace: beer
+  labels:
+    cloud-name: gcp
+    role: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: frontend
+  template:
+    metadata:
+      name: frontend-gcp
+      labels:
+        role: frontend
+        cloud-name: gcp
+    spec:
+      containers:
+          - name: client
+            image: aporeto/apobeer-client
+            env:
+            - name: BACKEND
+              value: "backend"

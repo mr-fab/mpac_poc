@@ -1,0 +1,4 @@
+#!/bin/bash
+cd $(dirname $0)
+./scale.backend.down
+./scale.frontend.down

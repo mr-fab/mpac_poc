@@ -1,0 +1,78 @@
+APIVersion: 0
+data:
+  networkaccesspolicies:
+    - action: Continue
+      activeDuration: ''
+      activeSchedule: ''
+      annotations: {}
+      applyPolicyMode: Bidirectional
+      associatedTags: []
+      description: ''
+      disabled: false
+      encryptionEnabled: true
+      fallback: false
+      logsEnabled: true
+      metadata: []
+      name: Encrypt
+      negateObject: false
+      negateSubject: false
+      object:
+        - - cloud-name=gcp
+      observationEnabled: false
+      observedTrafficAction: Continue
+      propagate: true
+      protected: false
+      subject:
+        - - cloud-name=azure
+        - - cloud-name=aws
+    - action: Continue
+      activeDuration: ''
+      activeSchedule: ''
+      annotations: {}
+      applyPolicyMode: Bidirectional
+      associatedTags: []
+      description: ''
+      disabled: false
+      encryptionEnabled: true
+      fallback: false
+      logsEnabled: true
+      metadata: []
+      name: Encrypt
+      negateObject: false
+      negateSubject: false
+      object:
+        - - cloud-name=azure
+      observationEnabled: false
+      observedTrafficAction: Continue
+      propagate: true
+      protected: false
+      subject:
+        - - cloud-name=aws
+        - - cloud-name=gcp
+    - action: Continue
+      activeDuration: ''
+      activeSchedule: ''
+      annotations: {}
+      applyPolicyMode: Bidirectional
+      associatedTags: []
+      description: ''
+      disabled: false
+      encryptionEnabled: true
+      fallback: false
+      logsEnabled: true
+      metadata: []
+      name: Encrypt
+      negateObject: false
+      negateSubject: false
+      object:
+        - - cloud-name=aws
+      observationEnabled: false
+      observedTrafficAction: Continue
+      propagate: true
+      protected: false
+      subject:
+        - - cloud-name=azure
+        - - cloud-name=gcp
+identities:
+  - networkaccesspolicy
+label: Kittenfeather Bite

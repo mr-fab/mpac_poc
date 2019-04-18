@@ -1,0 +1,5 @@
+#!/bin/bash
+cd $(dirname $0)
+kubectl scale --replicas=12 rs/frontend-aws -n beer
+kubectl scale --replicas=12 rs/frontend-azure -n beer
+kubectl scale --replicas=12 rs/frontend-gcp -n beer

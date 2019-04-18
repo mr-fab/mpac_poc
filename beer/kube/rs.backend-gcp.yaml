@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: backend-gcp
+  namespace: beer
+  labels:
+    cloud-name: gcp
+    role: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: backend
+  template:
+    metadata:
+      name: backend-gcp
+      labels:
+        role: backend
+        cloud-name: gcp
+    spec:
+      containers:
+          - name: client
+            image: aporeto/apobeer-server
+            env:
+            - name: BACKEND
+              value: "backend"

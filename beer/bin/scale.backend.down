@@ -1,0 +1,5 @@
+#!/bin/bash
+cd $(dirname $0)
+kubectl scale --replicas=3 rs/backend-aws -n beer
+kubectl scale --replicas=3 rs/backend-azure -n beer
+kubectl scale --replicas=3 rs/backend-gcp -n beer

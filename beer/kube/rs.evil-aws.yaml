@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: evil-aws
+  namespace: beer
+  labels:
+    cloud-name: aws
+    role: evil
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: evil
+  template:
+    metadata:
+      name: evil-aws
+      labels:
+        role: evil
+        cloud-name: aws
+    spec:
+      containers:
+          - name: client
+            image: aporeto/apobeer-client
+            env:
+            - name: BACKEND
+              value: "backend"

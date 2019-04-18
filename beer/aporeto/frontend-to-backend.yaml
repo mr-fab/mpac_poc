@@ -1,0 +1,29 @@
+APIVersion: 0
+data:
+  networkaccesspolicies:
+    - action: Allow
+      activeDuration: ''
+      activeSchedule: ''
+      annotations: {}
+      applyPolicyMode: Bidirectional
+      associatedTags: []
+      description: ''
+      disabled: false
+      encryptionEnabled: false
+      fallback: false
+      logsEnabled: true
+      metadata: []
+      name: Frontend to Backend
+      negateObject: false
+      negateSubject: false
+      object:
+        - - role=backend
+      observationEnabled: false
+      observedTrafficAction: Continue
+      propagate: true
+      protected: false
+      subject:
+        - - role=frontend
+identities:
+  - networkaccesspolicy
+label: Carpcrystal Kitten

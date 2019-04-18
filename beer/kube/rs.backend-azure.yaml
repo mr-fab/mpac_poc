@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: backend-azure
+  namespace: beer
+  labels:
+    cloud-name: azure
+    role: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: backend
+  template:
+    metadata:
+      name: backend-azure
+      labels:
+        role: backend
+        cloud-name: azure
+    spec:
+      containers:
+          - name: client
+            image: aporeto/apobeer-server
+            env:
+            - name: BACKEND
+              value: "backend"
